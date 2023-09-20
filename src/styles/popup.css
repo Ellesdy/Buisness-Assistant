@@ -1,0 +1,65 @@
+/* Styles for the iframe */
+#chatbox-iframe {
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color: #fff;
+    cursor: move;
+}
+
+/* Styles for the chatbox content inside the iframe */
+#chatbox-container {
+    width: 100%; /* Take the full width of the iframe */
+    height: 100%; /* Take the full height of the iframe */
+    position: relative; /* Relative positioning for child elements */
+    cursor: move; /* Indicate that it's draggable */
+    background-color: #f9f9f9; /* Background color for the chatbox */
+}
+
+#chatbox-header {
+    width: 100%;
+    height: 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    cursor: move;
+}
+
+#chat-box {
+    height: 340px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-top: 1px solid #ccc;
+}
+
+#input-box {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+#chatbox-container button {
+    width: 20%; /* Adjust width to 20% of the container width */
+    height: 38px; /* Adjust height to match the input field */
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    float: right; /* Float right to keep it on the same line as the input field */
+}

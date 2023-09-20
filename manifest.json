@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Business Assistant",
+    "version": "1.0",
+    "description": "A Chrome extension powered by GPT-4 for business tasks.",
+    "action": {
+        "default_icon": {
+            // "16": "images/icon16.png",
+            // "48": "images/icon48.png",
+            // "128": "images/icon128.png"
+        }
+    },
+    "icons": {
+        // "16": "images/icon16.png",
+        // "48": "images/icon48.png",
+        // "128": "images/icon128.png"
+    },
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["src/scripts/contentScript.js"],
+            "css": ["src/styles/popup.css"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["src/chatFrame.html", "src/styles/popup.css", "src/scripts/popup.js"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "chromeai",
+  "version": "1.0.0",
+  "description": "a chrome extension to help daily work flow, it should recognize certain form fields, and fill them out for you, help think of unique ways to find leads, and deal with customers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ellesdy",
+  "license": "ISC"
+}
