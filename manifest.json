@@ -25,7 +25,7 @@
     ],
     "web_accessible_resources": [
         {
-            "resources": ["src/chatFrame.html", "src/styles/popup.css", "src/scripts/popup.js"],
+            "resources": ["src/chatFrame.html", "src/styles/popup.css", "src/scripts/popup.js", "src/scripts/aiIntegration.js"],
             "matches": ["<all_urls>"]
         }
     ]

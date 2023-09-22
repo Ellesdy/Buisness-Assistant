@@ -1,4 +1,4 @@
-document.getElementById('send-btn').addEventListener('click', sendMessage);
+document.getElementById('send-button').addEventListener('click', sendMessage);
 document.getElementById('input-box').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         sendMessage();
@@ -12,7 +12,7 @@ function sendMessage() {
     // Display user's message
     chatBox.innerHTML += `<div>User: ${inputBox.value}</div>`;
     
-    // TODO: Send the message to GPT-4 and get the response
+    sendToAI(inputBox.value);  // Sending the message to the AI backend for processing
 
     // Clear the input box
     inputBox.value = '';

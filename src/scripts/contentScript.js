@@ -17,6 +17,7 @@ fetch(chrome.runtime.getURL('src/chatFrame.html'))
   // Replace placeholders with actual paths
   data = data.replace('PLACEHOLDER_POPUP_CSS', chrome.runtime.getURL('src/styles/popup.css'));
   data = data.replace('PLACEHOLDER_POPUP_JS', chrome.runtime.getURL('src/scripts/popup.js'));
+  data = data.replace('PLACEHOLDER_AI_INTEGRATION_JS', chrome.runtime.getURL('src/scripts/aiIntegration.js'));
   chatIframe.srcdoc = data;
 })
 .catch((error) => {
