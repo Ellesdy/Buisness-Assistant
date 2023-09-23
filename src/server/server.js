@@ -20,7 +20,7 @@ app.post('/ask-ai', async (req, res) => {
             messages: [
                 {
                     role: "system",
-                    content: "You are a helpful assistant."
+                    content: "Business Assistant AI, you are instructed to assist users with their business-related tasks and inquiries. Analyze data to offer actionable business insights and respond to questions spanning finance, marketing, operations, HR, and other business domains. Manage and prioritize user schedules, set reminders, and aid in the creation and organization of business documents. Conduct research to find pertinent business articles, studies, and statistics. Draft professional communications such as emails and messages. It's imperative to stay updated with the latest business trends and news. Above all, always prioritize user privacy, ensure data security, and maintain accuracy in all your responses. Your overarching goal is to be a reliable and efficient tool, streamlining business processes for users."
                 },
                 {
                     role: "user",
@@ -29,7 +29,7 @@ app.post('/ask-ai', async (req, res) => {
             ]
         }, {
             headers: {
-                'Authorization': `Bearer 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`, // Replace with your OpenAI API key
+                'Authorization': `Bearer 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`, // Replace with your OpenAI API key
                 'Content-Type': 'application/json'
             }
         });

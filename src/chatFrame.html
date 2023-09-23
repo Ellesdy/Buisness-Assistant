@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="PLACEHOLDER_POPUP_CSS">
     <title>Business Assistant</title>
 </head>
+
 <body>
     <div id="chatbox-header">Chatbox</div>
     <div id="chat-box"></div>
@@ -15,5 +17,46 @@
     </div>
     <script src="PLACEHOLDER_AI_INTEGRATION_JS"></script>
     <script src="PLACEHOLDER_POPUP_JS"></script>
+    <script>
+
+        var baseMouseX, baseMouseY;
+        const chatHeader = document.getElementById('chatbox-header');
+
+        chatHeader.addEventListener('mousedown', handleDragStart);
+
+        function handleDragStart(evt) {
+            baseMouseX = evt.clientX;
+            baseMouseY = evt.clientY;
+
+            window.parent.postMessage({
+                msg: 'CHATBOX_DRAG_START',
+                mouseX: baseMouseX,
+                mouseY: baseMouseY
+            }, '*');
+
+            document.addEventListener('mouseup', handleDragEnd);
+            document.addEventListener('mousemove', handleMousemove);
+        }
+
+        function handleMousemove(evt) {
+            window.parent.postMessage({
+                msg: 'CHATBOX_DRAG_MOUSEMOVE',
+                offsetX: evt.clientX - baseMouseX,
+                offsetY: evt.clientY - baseMouseY
+            }, '*');
+        }
+
+        function handleDragEnd() {
+            window.parent.postMessage({
+                msg: 'CHATBOX_DRAG_END'
+            }, '*');
+
+            document.removeEventListener('mouseup', handleDragEnd);
+            document.removeEventListener('mousemove', handleMousemove);
+        }
+
+    </script>
+
 </body>
+
 </html>
